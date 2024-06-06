@@ -1,38 +1,178 @@
-.App {
-  text-align: center;
+.wrapper {
+  height: 100dvh;
+  width: 26%;
+  margin: auto;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main {
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.7) 0px 0px 16px 0px;
+  height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.carousel {
+  position: relative;
+  /* overflow: hidden; */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-inner .item {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+#header {
+  height: 22%;
+  background-color: #0655FA;
+  padding: 0px 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#header h2,
+p {
+  margin: 0px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#header p {
+  color: rgb(235, 235, 235);
+}
+
+#divider {
+  height: 13px;
+  width: 100%;
+  background: #E2F2D7;
+}
+
+label {
+  font-size: 15px;
+  color: black;
+  font-weight: 500;
+  display: block;
+  padding: 7px 5px;
+}
+
+.margin {
+  padding: 5px 10px;
+}
+
+.form {
+  height: 78%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.date .select-button {
+  width: 100%;
+  background: transparent;
+  padding: 8px;
+  border: 2px solid lightgrey;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.date .date-picker {
+  position: absolute;
+  left: 15%;
+  z-index: 2;
+}
+
+.date #pickUp,
+#return {
+  position: relative;
+}
+
+.age {
+  margin-right: 20px;
+}
+
+input,
+select {
+  width: 100%;
+  background: transparent;
+  padding: 10px 8px;
+  border: 2px solid lightgrey;
+  border-radius: 6px;
+}
+
+.btns {
+  background: white;
+  padding: 10% 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btns button {
+  background: #727272;
+  color: white;
+  font-size: 15px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-transform: uppercase;
+  border-radius: 200px
+}
+
+.btns button:hover {
+  background-color: #5a5a5a;
+}
+
+.btns .next {
+  background-color: #0655FA;
+  margin-left: auto;
+}
+
+.btns .next:hover {
+  background-color: #0043c0;
+}
+button:disabled{
+  opacity: 0.5;
+}
+
+
+@media screen and (max-width: 450px) {
+  .wrapper {
+    width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+  .main{
+    border-radius: 0px;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 500px) {
+  .wrapper {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 501px) and (max-width: 800px) {
+  .wrapper {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 801px) and (max-width: 1200px) {
+  .wrapper {
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 1201px) {
+  .wrapper {
+    width: 30%;
   }
 }

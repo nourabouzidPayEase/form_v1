@@ -5,6 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: url('https://img.freepik.com/free-photo/white-gray-color-wood-texture-surface_74190-8287.jpg?t=st=1715086701~exp=1715090301~hmac=07510ef69d242f7d3302c20bfd999140ed9643914d0ceaade73baa2fb91ed560&w=996');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 code {
